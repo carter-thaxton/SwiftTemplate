@@ -1,6 +1,6 @@
 import XCTest
-@testable import BasicTests
+@testable import SwiftTemplateTests
 
 XCTMain([
-    testCase(BasicTests.allTests),
+    testCase(HelloTests.allTests),
 ])

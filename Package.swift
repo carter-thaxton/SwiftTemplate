@@ -2,14 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "Basic",
+    name: "SwiftTemplate",
     products: [
         .library(
-            name: "BasicLib",
-            targets: ["BasicLib"]),
+            name: "SwiftTemplateLib",
+            targets: ["SwiftTemplateLib"]),
         .executable(
-            name: "basic",
-            targets: ["BasicApp"]),
+            name: "swiftcmd",
+            targets: ["SwiftTemplateCmd"]),
     ],
     dependencies: [
     ],
@@ -17,14 +17,13 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
-            name: "BasicLib",
+            name: "SwiftTemplateLib",
             dependencies: []),
         .target(
-            name: "BasicApp",
-            dependencies: ["BasicLib"]),
+            name: "SwiftTemplateCmd",
+            dependencies: ["SwiftTemplateLib"]),
         .testTarget(
-            name: "BasicTests",
-            dependencies: ["BasicLib"],
-            path: "Tests"),
+            name: "SwiftTemplateTests",
+            dependencies: ["SwiftTemplateLib"]),
     ]
 )
