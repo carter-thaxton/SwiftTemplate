@@ -1,0 +1,8 @@
+sources:
+  - Tests
+templates:
+  - Tests/LinuxMain.swift.stencil
+output:
+  Tests/LinuxMain.swift
+args:
+  testimports: "@testable import SwiftTemplateTests"
